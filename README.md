@@ -1,5 +1,4 @@
-# zoomAutomation
-Join zoom meetings in one go. <br>
-Set all meetings of week and join them on your system startup. <br>
+# whatsappAutomation
+Full whatsapp automation <br>
 
-(I'll be working on headless browser too)
+[Readme will be updated soon]
