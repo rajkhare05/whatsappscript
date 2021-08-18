@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import asyncio
@@ -26,6 +25,9 @@ class whatsApp:
 
 		time.sleep(3) # to scan QR Code during this time
 		self.message_bar = self.driver.find_element_by_xpath("//div[@class = '_2A8P4']")
+		self.search_bar = self.driver.find_element_by_xpath("//div[@class = '_2_1wd copyable-text selectable-text']")
+		self.exit_sb_button = self.driver.find_element_by_xpath("//div[@class='_1rPZq _2w7RB']")
+		# exit left pane search bar (sb = search bar)
 		self.last_msg_id = self.get_last_text_msg_id()
 
 	def is_connected(self):
@@ -35,6 +37,7 @@ class whatsApp:
 
 	def quit_driver(self):
 		self.driver.quit()
+	
 	
 	def send_message(self, message: str):
 		'''
